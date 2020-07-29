@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <title >Typing Test</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="src/script.js" defer></script>
+
+</head>
+<body style = "background-color:rgba(184, 214, 243, 0.9);text-align: center;">
+  <div class="container" style = "display:flex;flex-direction: column;align-items: center;">
+    <div class="heading">Typing Test</div>
+    <div class="header" style = "display:flex;align-items:center;">
+      <div class="words" style = "display: none;">
+        <div class="header_text">WPM</div>
+        <div class="curr_wpm">0</div>
+      </div>
+      <div class="chars" style = "display: none;">
+        <div class="header_text">CPM</div>
+        <div class="curr_cpm">0</div>
+      </div>
+      <div class="timer">
+        <div class="header_text">Time</div>
+        <div class="curr_time">60s</div>
+      </div>
+      <div class="errors">
+        <div class="header_text">Errors</div>
+        <div class="curr_errors">0</div>
+      </div>
+      <div class="accuracy" style = "display: none;">
+        <div class="header_text">% Accuracy</div>
+        <div class="curr_accuracy">100</div>
+      </div>
+    </div>
+
+    <div class="wordsToType"></div>
+    <textarea class="input_text" placeholder="|" ></textarea>
+    <button class="restart">Restart</button>
+  </div>
+</body>
+</html>

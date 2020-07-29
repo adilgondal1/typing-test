@@ -1,0 +1,76 @@
+ .heading {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    font-family: "Lucida Console", Courier, monospace;
+
+  }
+  
+  
+  .timer, .errors,
+  .accuracy, .chars, .words {
+    background-color: #fffffffa;
+    height: 60px;
+    width: 70px;
+    margin: 8px;
+    padding: 12px;
+    border-radius: 20%;
+    box-shadow: black 5px 8px 5px;
+  }
+  
+  .header_text {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: 600;
+    font-family: "Lucida Console", Courier, monospace;
+
+  }
+  
+  .curr_time, .curr_errors,
+  .curr_accuracy, .curr_cpm,
+  .curr_wpm {
+    font-size: 2.75rem;
+
+  }
+  
+  .wordsToType {
+    background-color: #fffffffa;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 25px;
+    box-shadow: black 5px 8px 5px;
+    
+  }
+  
+  .input_text {
+    background-color: #fffffffa;
+    border-radius: 25px;
+    height: 80px;
+    width: 40%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: black 5px 8px 5px;
+  }
+  
+  .incorrect {
+    color: red;
+    text-decoration: underline;
+  }
+  
+  .correct {
+    color: rgb(105, 221, 105);
+  }
+  
+  .restart {
+    display: none;
+    border-radius: 10px;
+    background-color: #84cfcf;
+    font-size: 1.4rem;
+    padding: 12px;
+    box-shadow: black 5px 8px 5px;
+    color: rgb(255, 255, 255);
+    font-family: "Lucida Console", Courier, monospace;
+  }
