@@ -6,7 +6,7 @@
 
 </head>
 <body style = "background-color:rgba(184, 214, 243, 0.9);text-align: center;">
-  <div class="container" style = "display:flex;flex-direction: column;align-items: center;">
+  <div class="container" style = "display:flex;flex-direction: column;align-items: center;" >
     <div class="heading">Typing Test</div>
     <div class="header" style = "display:flex;align-items:center;">
       <div class="words" style = "display: none;">
@@ -17,11 +17,11 @@
         <div class="header_text">CPM</div>
         <div class="curr_cpm">0</div>
       </div>
-      <div class="timer">
+      <div class="timer" style = "display: none;"> <!-- display -->
         <div class="header_text">Time</div>
         <div class="curr_time">60s</div>
       </div>
-      <div class="errors">
+      <div class="errors" style = "display: none;"> <!-- display -->
         <div class="header_text">Errors</div>
         <div class="curr_errors">0</div>
       </div>
@@ -30,10 +30,53 @@
         <div class="curr_accuracy">100</div>
       </div>
     </div>
+    <div class="user-form">
+        <input class = "username" type="text" placeholder="Enter Username" name="uname" required>
+        <button class = "submit-btn" type="submit">Submit</button>
+    </div>
 
-    <div class="wordsToType"></div>
-    <textarea class="input_text" placeholder="|" ></textarea>
-    <button class="restart">Restart</button>
+    <div class="scores-container" >
+        <div class ="my-scores" style = "display: none;">
+            <p class = "user-scores"></p>
+            <table class="leaderboard" id="mine">
+                <thead>
+                    <tr>
+                        <td>Rank</td>
+                        <td>Score</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class ="top-scores" style = "display: none;">
+            <p>Highest Scores</p>
+            <table class="leaderboard" id="overall">
+                <thead>
+                    <tr>
+                        <td>Rank</td>
+                        <td>Username</td>
+                        <td>Score</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class = "play" style = "display: none;">
+        <button class = "submit-btn" type="submit">Play!</button>
+    </div>
+    <div class="update-form" style = "display: none;">
+        <input class = "update-username" type="text" placeholder="Edit Username" name="updatename">
+        <button class = "update-btn" type="submit">Submit</button>
+    </div>
+    <div class = "delete" style = "display: none;">
+        <button class = "delete-btn" type="submit">Delete User</button>
+    </div>
+
+
+    <div class="wordsToType" style = "display: none;"></div> <!-- display -->
+    <textarea class="input_text" placeholder="|" style = "display: none;"></textarea> <!-- display -->
+    <button class="restart" id = "button">Restart</button>
+    <button class="restart" id = "view">View Scores</button>
+
   </div>
 </body>
 </html>

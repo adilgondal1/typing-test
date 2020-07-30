@@ -73,4 +73,91 @@
     box-shadow: black 5px 8px 5px;
     color: rgb(255, 255, 255);
     font-family: "Lucida Console", Courier, monospace;
+    margin-top: 15px;
+  }
+
+  .username {
+    background-color: #fffffffa;
+    border-radius: 10px;
+    height: 50px;
+    width: 58%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: black 5px 8px 5px;
+    text-align: center;
+  }
+
+  .submit-btn {
+    border-radius: 10px;
+    background-color: #84cfcf;
+    font-size: 1.4rem;
+    padding: 12px;
+    box-shadow: black 5px 8px 5px;
+    color: rgb(255, 255, 255);
+    font-family: "Lucida Console", Courier, monospace;
+    margin-top: 15px;
+  }
+
+  .scores-container > div {
+    font-size: 0.9em;
+    background-color: #F4F4F4;
+    height: 30vh;
+    width: 150px;
+    padding: 15px 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px #384E77;
+    overflow: auto;
+    margin-top: 10%;
+}
+
+.scores-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+.my-scores,.top-scores {
+    text-align: center;
+}
+
+.my-scores{
+    margin-right: 100
+}
+
+.top-scores{
+    margin-left: 100
+}
+
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #384E77;
+    font-family: "Lucida Console", Courier, monospace;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+
+.update-btn, .delete-btn {
+    border-radius: 10px;
+    background-color: #84cfcf;
+    font-size: .75rem;
+    padding: 12px;
+    box-shadow: black 5px 8px 5px;
+    color: rgb(255, 255, 255);
+    font-family: "Lucida Console", Courier, monospace;
+    margin-top: 15px;
+  }
+
+  .update-username {
+    background-color: #fffffffa;
+    border-radius: 10px;
+    height: 40px;
+    width: 58%;
+    font-size: .75rem;
+    font-weight: 600;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: black 5px 8px 5px;
   }
