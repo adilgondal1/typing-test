@@ -45,7 +45,7 @@ function displayScores(){
 }
 
 function getUsers(){
-    fetch("http://localhost:9292/users")
+    fetch("http://localhost:3000/users")
     .then(res => res.json())
     .then(users => {
         all_users = users.message.map(user => user.username)
@@ -80,7 +80,7 @@ function createUser(name){
             username: name
         })
     }
-    fetch('http://localhost:9292/users', configObj)
+    fetch('http://localhost:3000/users', configObj)
         .then(res => res.json())
         .then(json => { 
             sessionStorage.setItem('my_id', json.message.split(" ")[0])
@@ -115,7 +115,7 @@ function updateUser(){
             username: name
         })
     }
-    fetch(`http://localhost:9292/users/${my_id}`, configObj)
+    fetch(`http://localhost:3000/users/${my_id}`, configObj)
         .then(res => res.json())
         .then(json => { 
             user_scores.innerText = `${name}'s Top Scores`
@@ -127,7 +127,7 @@ function updateUser(){
 }
 
 delete_btn.addEventListener('click', function(){
-    fetch(`http://localhost:9292/users/${my_id}`, {
+    fetch(`http://localhost:3000/users/${my_id}`, {
         method: 'DELETE',
     })
     .then( () => {
@@ -148,7 +148,7 @@ delete_btn.addEventListener('click', function(){
 
 
 function getUserScores(id){
-    fetch(`http://localhost:9292/users/${id}`)
+    fetch(`http://localhost:3000/users/${id}`)
     .then(res => res.json())
     .then(user => sortScores(user.scores,my_leaderboard))
 }
@@ -215,13 +215,13 @@ function viewAgain(){
 }
 
 function getScores(){
-    fetch("http://localhost:9292/scores")
+    fetch("http://localhost:3000/scores")
     .then(res => res.json())
     .then(scores => sortScores(scores,top_leaderboard))
 }
 
 
-const TIMER = 3;
+const TIMER = 60;
 const doc_timer = document.querySelector(".curr_time");
 const time_display = document.querySelector(".timer");
 const doc_accuracy = document.querySelector(".curr_accuracy");
@@ -454,7 +454,7 @@ function createScore(wpm){
             user_id: my_id 
         })
     }
-    fetch('http://localhost:9292/scores', configObj)
+    fetch('http://localhost:3000/scores', configObj)
 }
 
 
