@@ -62,14 +62,14 @@ function findUser(users){
         user_scores.innerText = `${found.username}'s Top Scores`
         my_id = found.id
         my_name = found.username
-        console.log(my_id)
+        // console.log(my_id)
     } else {
         createUser(username.value)
     }
 }
 
 function createUser(name){
-    console.log(name)
+    // console.log(name)
     const configObj = { 
         method: 'POST', 
         headers: { 
@@ -174,12 +174,12 @@ function showScores(scores,leaderboard){
         let tr = document.createElement('tr')
         tr.classList.add("additions");
         if (leaderboard === my_leaderboard){
-            tr.innerHTML = `<td>${index+1}</td><td>${score.value}</td>`
+            tr.innerHTML = `<td>${index+1}.</td><td>${score.value}</td>`
         }else {
             if (score.user.username == my_name){
-                tr.innerHTML = `<td>${index+1}</td><td id = "mine" >${score.user.username}</td><td>${score.value}</td>`
+                tr.innerHTML = `<td>${index+1}.</td><td id = "mine" >${score.user.username}</td><td>${score.value}</td>`
             } else {
-                tr.innerHTML = `<td>${index+1}</td><td>${score.user.username}</td><td>${score.value}</td>`
+                tr.innerHTML = `<td>${index+1}.</td><td>${score.user.username}</td><td>${score.value}</td>`
             }
         }
         leaderboard.append(tr)
@@ -187,6 +187,7 @@ function showScores(scores,leaderboard){
 }
 
 function viewAgain(){
+    username.value = my_name
     reset()
     adds = document.querySelectorAll(".additions")
     adds.forEach(add => add.remove())
@@ -221,7 +222,7 @@ function getScores(){
 }
 
 
-const TIMER = 60;
+const TIMER = 30;
 const doc_timer = document.querySelector(".curr_time");
 const time_display = document.querySelector(".timer");
 const doc_accuracy = document.querySelector(".curr_accuracy");
@@ -309,7 +310,7 @@ function updateValues(){
           if (input_ary[curr_char] != quotes_array[quoteNo].substring(curr_char,curr_char+1)){
               total_errors++
           }
-          console.log(total_errors)
+        //   console.log(total_errors)
         doc_error.textContent = total_errors;
       }
   
@@ -363,10 +364,10 @@ function processCurrentWord(){
     if (curr_input === curr_word){
         curr_word++;
         wordCount++;
-        console.log(wordCount)
+        // console.log(wordCount)
         used_words[quoteNo] += "1"
         characterTyped += (curr_input.length - 1)
-        console.log(characterTyped)
+        // console.log(characterTyped)
     } else {
         used_words[quoteNo] += "0"
     }
